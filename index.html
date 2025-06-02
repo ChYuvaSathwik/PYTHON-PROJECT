@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="matrixCanvas"></canvas>
+
+  <div class="wrapper">
+    <div class="container" id="setupContainer">
+      <h1>🧠 Set Game Range</h1>
+      <p>Enter lower and upper bounds</p>
+      <input type="number" id="lowerBound" placeholder="Lower Bound">
+      <input type="number" id="upperBound" placeholder="Upper Bound">
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="container" id="gameContainer" style="display: none;">
+      <h1>🎯 Number Guessing Game</h1>
+      <p id="rangeInfo"></p>
+      <input type="number" id="guessInput" placeholder="Your Guess">
+      <button onclick="checkGuess()">Guess</button>
+      <p id="message"></p>
+      <button onclick="restartGame()">🔁 Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
